@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h1>Linktree Home Page</h1>
+
+  <% if current_user %>
+    <h2>Hi, <%= current_user.email %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <h2>You are not logged in</h2>
+  <% end %>
+
+</div>
+
